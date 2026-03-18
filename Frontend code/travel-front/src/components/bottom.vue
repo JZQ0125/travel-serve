@@ -1,21 +1,26 @@
 <template>
-<!--  <div class="bottom">-->
-<!--    <div class="bottom1">-->
-<!--      <img src="../assets/image/Frame 28.png">-->
-<!--    </div>-->
-<!--    <div class="bottom2">-->
-<!--      <div style="font-size:20px">简介：</div>-->
-<!--      <div>系统角色上分为管理员以及普通用户进行实现， 管理员主要负责整个网站后台的维护管理，例如包括用户管理、景点以及分类管理、旅游路线管理、酒店管理、资讯管理、轮播图管理、个人中心等功能； 前台包括用户登陆注册、忘记密码、旅游景点查询和预定、旅游路线查询和收藏、酒店查询和预订、资讯、我的收藏、我的预定、个人中心等功能。</div>-->
-<!--    </div>-->
-<!--    <div class="bottom3">-->
-<!--      <div style="font-size:20px">联系我们：</div>-->
-<!--      <div>邮箱: example@mail.com</div>-->
-<!--      <div>QQ: 1760272627</div>-->
-<!--      <div>微信: 1760272627</div>-->
-<!--      <div>微博: example@mail.com</div>-->
-<!--      <div>电话: 12345678998</div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div class="bottom">
+    <div class="bottom-content">
+      <div class="bottom1">
+        <img src="../assets/image/logo.png" style="height: 50px; border-radius: 8px;">
+        <div class="bottom-brand">旅游信息推荐系统</div>
+        <div class="bottom-desc">发现美好旅途，探索精彩世界</div>
+      </div>
+      <div class="bottom2">
+        <div class="bottom-title">关于我们</div>
+        <div class="bottom-text">致力于为用户提供优质的旅游信息服务，包括景点查询、路线规划、酒店预订等一站式旅游解决方案。</div>
+      </div>
+      <div class="bottom3">
+        <div class="bottom-title">联系方式</div>
+        <div class="bottom-item">客服邮箱: service@travel.com</div>
+        <div class="bottom-item">服务热线: 400-888-8888</div>
+        <div class="bottom-item">工作时间: 9:00 - 18:00</div>
+      </div>
+    </div>
+    <div class="bottom-copyright">
+      Copyright 2024 旅游信息推荐系统 All Rights Reserved
+    </div>
+  </div>
 </template>
 
 <script>
@@ -55,26 +60,72 @@
 
 <style scoped>
   .bottom {
-      margin-top: 20px;
+      margin-top: 60px;
       width: 100%;
-      height: 300px;
+      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      font-family: 'PingFang SC', '黑体', sans-serif;
+  }
+  .bottom-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 40px 40px;
       display: flex;
-      justify-content: space-around;
-      background-color: #89A5C2;
-      align-items: center;
-      font-family: '黑体';
+      justify-content: space-between;
+      gap: 60px;
   }
-  .bottom1,.bottom3,.bottom2 {
-    color: #000000;
+  .bottom1 {
+    flex: 1;
   }
-  .bottom2 {
-    width: 500px;
-    letter-spacing: 2px;
-    line-height: 30px;
+  .bottom-brand {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 16px;
   }
-  .bottom1>div,.bottom3>div,.bottom2>div {
+  .bottom-desc {
     font-size: 14px;
-    margin-top: 12px;
-    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 8px;
+  }
+  .bottom2, .bottom3 {
+    flex: 1;
+  }
+  .bottom-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 12px;
+  }
+  .bottom-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .bottom-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+  }
+  .bottom-item {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+  }
+  .bottom-item:hover {
+    color: #ffffff;
+  }
+  .bottom-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
   }
 </style>

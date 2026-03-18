@@ -127,62 +127,81 @@
 
 <style scoped lang="scss">
     .el-aside {
-        background-color: #222B40;
+        background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+        transition: width 0.3s ease;
     }
     .back-icon {
         display: flex;
-        height: 100px;
-        background-color: #222B40;
+        height: 80px;
+        background: transparent;
         justify-content: center;
         align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .logo {
-        widows: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     .logo-text {
         padding-left: 6px;
-        /* Bold/19px */
         color: #fff;
-        font-family: Mulish;
+        font-family: 'PingFang SC', Mulish, sans-serif;
         font-size: 15px;
         font-weight: 700;
-        line-height: 24;
-        letter-spacing: 0.4000000059604645px;
+        line-height: 24px;
+        letter-spacing: 0.4px;
     }
     .el-menu {
-        height: calc(100vh - 100px);
+        height: calc(100vh - 80px);
         overflow-x: hidden;
-        font-family: "黑体"!important;
-        font-weight: 550 !important;
+        font-family: 'PingFang SC', '黑体', sans-serif !important;
+        font-weight: 500 !important;
+        padding: 12px 8px;
+        background: transparent !important;
     }
-    .el-menu::-webkit-scrollbar,.el-aside::-webkit-scrollbar {
+    .el-menu::-webkit-scrollbar, .el-aside::-webkit-scrollbar {
         width: 0px;
         height: 0px;
     }
     .el-submenu>>>.el-submenu__title:hover {
-        color:#EAB040!important;
-        background-color: #3E3F49!important;
+        color: #60a5fa !important;
+        background-color: rgba(96, 165, 250, 0.1) !important;
+        border-radius: 8px;
     } 
-    .el-menu-vertical:deep(.el-menu-item:hover){
-        color:#0863F2!important;
-        background-color: #001528!important;
+    .el-menu-vertical:deep(.el-menu-item) {
+        border-radius: 8px;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+    .el-menu-vertical:deep(.el-menu-item:hover) {
+        color: #60a5fa !important;
+        background-color: rgba(96, 165, 250, 0.1) !important;
     }
     .el-menu-vertical:deep(.el-menu-item.is-active) {
-        background-color: #001528!important;
-        box-shadow:inset 5px 0 #DDE2FF; 
+        background: linear-gradient(90deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.05) 100%) !important;
+        color: #60a5fa !important;
+        box-shadow: inset 3px 0 0 #3b82f6;
+        border-radius: 8px;
     }
     .el-menu-item, .el-submenu__title {
-        height: 47px !important;
-        line-height: 47px !important;
+        height: 48px !important;
+        line-height: 48px !important;
+        font-size: 14px;
     }
     .el-aside .el-menu {
         border-right: none !important;
     }
     .el-submenu .el-menu-item {
-        background-color: #1B2233!important;
+        background-color: transparent !important;
+        padding-left: 48px !important;
     }
     .el-submenu .el-submenu:deep(.el-submenu__title) {
-        background-color: #1B2233!important;
+        background-color: transparent !important;
+    }
+    .el-menu-item i, .el-submenu__title i {
+        font-size: 18px;
+        margin-right: 12px;
     }
 </style>

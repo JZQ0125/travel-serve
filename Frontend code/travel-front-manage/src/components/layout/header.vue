@@ -118,34 +118,54 @@
     .header {
       background-color: #ffffff;
       width: 100%;
-      height: 50px !important;
+      height: 64px !important;
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding-left: 0;
+      padding: 0 24px 0 0;
       justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #f1f5f9;
     }
     .icon-div {
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .icon-div:hover {
+      background-color: #f1f5f9;
     }
     .icon {
       font-size: 20px;
+      color: #475569;
     }
     .header-right {
-      width: 43%;
       display: flex;
       flex-direction: row;
       align-items: center;
+      gap: 8px;
+    }
+    .header-right .icon-div img {
+      border: 2px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+    .header-right .icon-div:hover img {
+      border-color: #3b82f6;
     }
     .search-input {
       width: 60%;
     }
     .el-input {
-      background-color: #E0E0EA !important;
+      background-color: #f1f5f9 !important;
+      border-radius: 8px;
+    }
+    .el-dropdown-link {
+      display: flex;
+      align-items: center;
     }
 </style>

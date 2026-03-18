@@ -151,16 +151,24 @@
   .index {
     width: 100%;
     height: 100%;
-    font-family: '黑体';
+    font-family: 'PingFang SC', '黑体', sans-serif;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 24px;
+    padding: 24px;
+    background-color: #f8fafc;
   }
   .index1 {
-    width: 100%;
-    height: 49%;
-    margin-bottom: 1%;
+    width: calc(50% - 12px);
+    height: calc(50% - 12px);
+    min-height: 300px;
     background-color: #ffffff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    transition: all 0.3s ease;
+  }
+  .index1:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   }
 </style>

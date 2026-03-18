@@ -102,38 +102,56 @@
 <style scoped>
   .header {
       width: 100%;
-      height: 80px;
+      height: 72px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
   }
   .header1 {
-    width: 80%;
-    height: 80px;
+    width: 90%;
+    max-width: 1400px;
+    height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: transparent;
   }
   .header4 {
-    width: 80%;
+    flex: 1;
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin: 0 40px;
   }
   .menu-list {
     display: flex;
-    color: #000000;
+    color: rgba(255, 255, 255, 0.9);
+    gap: 8px;
   }
   .menu-list>div{
-    font-family: '黑体';
-    font-size: 18px;
-    width: 100px;
+    font-family: 'PingFang SC', '黑体', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 18px;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  .menu-list>div:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
   }
   .menu_item {
-    color: #DC1616;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
   }
   .ai-menu {
     position: relative;
@@ -142,44 +160,72 @@
   .ai-dropdown {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 8px 0;
-    min-width: 120px;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 140px;
     z-index: 1000;
-    margin-top: 8px;
+  }
+  .ai-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
   }
   .ai-menu:hover .ai-dropdown {
     display: block;
   }
   .dropdown-item {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #333;
-    transition: all 0.3s;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #374151;
+    transition: all 0.2s ease;
     white-space: nowrap;
+    border-radius: 8px;
   }
   .dropdown-item:hover {
-    background-color: #f5f5f5;
-    color: #DC1616;
+    background-color: #f0f9ff;
+    color: #1a365d;
   }
   .header5 {
     display: flex;
     align-items: center;
+    gap: 12px;
+  }
+  .header5 img {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  .header5 img:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
   }
   .header6 {
-    margin-left: 10px;
-    width: 80px;
-    height: 30px;
-    border-radius: 20px;
-    color: #ffffff;
-    background-color: #4381FF;
+    width: 72px;
+    height: 36px;
+    border-radius: 18px;
+    color: #1a365d;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .header6:hover {
+    background-color: #f0f9ff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 </style>

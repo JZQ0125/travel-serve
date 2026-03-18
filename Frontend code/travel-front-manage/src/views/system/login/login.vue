@@ -104,18 +104,30 @@
 .login {
     width: 100%;
     height: 100%;
-    font-family: '黑体';
+    font-family: 'PingFang SC', '黑体', sans-serif;
     display: flex;
+    background-color: #0f172a;
 }
 .login1 {
-    width: 60%;
+    width: 55%;
     height: 100%;
     background-image: url('../../../assets/image/image 2.png');
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+.login1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
 }
 .login2 {
     font-size: 35px;
@@ -128,23 +140,53 @@
     font-weight: bold;
 }
 .login4 {
-    width: 40%;
+    width: 45%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
 }
 .login5 {
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    max-width: 420px;
     flex-direction: column;
     display: flex;
-    justify-content: space-around;
+    gap: 28px;
     align-items: center;
+    padding: 60px 40px;
+}
+.login5 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.login5 .el-input {
+    width: 100%;
+}
+.login5 .el-input__inner {
+    height: 52px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    font-size: 15px;
+    padding-left: 48px;
+    transition: all 0.3s ease;
+}
+.login5 .el-input__inner:focus {
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+.login5 .el-input__prefix {
+    left: 16px;
+    color: #64748b;
 }
 .login6 {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    line-height: 1.4;
 }
 .login7 {
     width: 100%;
@@ -156,10 +198,22 @@
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    width: 70%;
-    height: 50px;
+    width: 100%;
+    height: 52px;
     cursor: pointer;
-    border-radius: 20px;
-    background-color: #3E78F3;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+.login8:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+}
+.login8:active {
+    transform: translateY(0);
 }
 </style>
