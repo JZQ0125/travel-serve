@@ -1,7 +1,12 @@
 <template>
   <div class="header">
     <div class="header1">
-      <img style="height:90%" src="../assets/image/logo.png">
+      <div class="logo" @click="toPage('index')">
+        <div class="logo-icon">
+          <i class="el-icon-position"></i>
+        </div>
+        <span class="logo-text">旅途</span>
+      </div>
       <div class="header4">
         <div class="menu-list">
             <div @click="toPage('index')" :class="$route.path == '/'?'menu_item':''">系统主页</div>
@@ -23,7 +28,9 @@
         </div>
       </div>
       <div class="header5">
-        <img @click="toCenter" style="width:40px;height:40px;border-radius:50%" src="../assets/image/image 2.png">
+        <div class="user-avatar" @click="toCenter">
+          <i class="el-icon-user"></i>
+        </div>
         <div class="header6" @click="loginOut">
           退出
         </div>
@@ -106,8 +113,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -121,6 +128,35 @@
     align-items: center;
     background-color: transparent;
   }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .logo:hover {
+    opacity: 0.9;
+  }
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-icon i {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
   .header4 {
     flex: 1;
     height: 60px;
@@ -131,25 +167,25 @@
   }
   .menu-list {
     display: flex;
-    color: rgba(255, 255, 255, 0.9);
-    gap: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    gap: 4px;
   }
   .menu-list>div{
-    font-family: 'PingFang SC', '黑体', sans-serif;
-    font-size: 15px;
+    font-family: 'PingFang SC', -apple-system, sans-serif;
+    font-size: 14px;
     font-weight: 500;
-    padding: 10px 18px;
+    padding: 10px 16px;
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
     white-space: nowrap;
   }
   .menu-list>div:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
   }
   .menu_item {
-    background-color: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
     color: #ffffff !important;
     font-weight: 600 !important;
   }
@@ -164,7 +200,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: #ffffff;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding: 8px;
     min-width: 140px;
@@ -192,28 +228,41 @@
     border-radius: 8px;
   }
   .dropdown-item:hover {
-    background-color: #f0f9ff;
-    color: #1a365d;
+    background-color: #f1f5f9;
+    color: #0f172a;
   }
   .header5 {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-  .header5 img {
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
     border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     transition: all 0.3s ease;
   }
-  .header5 img:hover {
+  .user-avatar i {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .user-avatar:hover {
     border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
   }
   .header6 {
-    width: 72px;
-    height: 36px;
-    border-radius: 18px;
-    color: #1a365d;
-    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,11 +270,9 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   .header6:hover {
-    background-color: #f0f9ff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
   }
 </style>

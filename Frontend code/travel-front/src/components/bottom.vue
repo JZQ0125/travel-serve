@@ -2,23 +2,35 @@
   <div class="bottom">
     <div class="bottom-content">
       <div class="bottom1">
-        <img src="../assets/image/logo.png" style="height: 50px; border-radius: 8px;">
-        <div class="bottom-brand">旅游信息推荐系统</div>
+        <div class="bottom-logo">
+          <div class="bottom-logo-icon">
+            <i class="el-icon-position"></i>
+          </div>
+          <span class="bottom-logo-text">旅途</span>
+        </div>
         <div class="bottom-desc">发现美好旅途，探索精彩世界</div>
+        <div class="bottom-social">
+          <div class="social-icon"><i class="el-icon-chat-dot-round"></i></div>
+          <div class="social-icon"><i class="el-icon-phone"></i></div>
+          <div class="social-icon"><i class="el-icon-message"></i></div>
+        </div>
       </div>
       <div class="bottom2">
-        <div class="bottom-title">关于我们</div>
-        <div class="bottom-text">致力于为用户提供优质的旅游信息服务，包括景点查询、路线规划、酒店预订等一站式旅游解决方案。</div>
+        <div class="bottom-title">快速链接</div>
+        <div class="bottom-link">景点信息</div>
+        <div class="bottom-link">旅游路线</div>
+        <div class="bottom-link">景区酒店</div>
+        <div class="bottom-link">旅游资讯</div>
       </div>
       <div class="bottom3">
-        <div class="bottom-title">联系方式</div>
-        <div class="bottom-item">客服邮箱: service@travel.com</div>
-        <div class="bottom-item">服务热线: 400-888-8888</div>
-        <div class="bottom-item">工作时间: 9:00 - 18:00</div>
+        <div class="bottom-title">联系我们</div>
+        <div class="bottom-item"><i class="el-icon-message"></i> service@travel.com</div>
+        <div class="bottom-item"><i class="el-icon-phone"></i> 400-888-8888</div>
+        <div class="bottom-item"><i class="el-icon-time"></i> 9:00 - 18:00</div>
       </div>
     </div>
     <div class="bottom-copyright">
-      Copyright 2024 旅游信息推荐系统 All Rights Reserved
+      Copyright 2024 旅途 All Rights Reserved
     </div>
   </div>
 </template>
@@ -60,72 +72,114 @@
 
 <style scoped>
   .bottom {
-      margin-top: 60px;
+      margin-top: 0;
       width: 100%;
-      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-      font-family: 'PingFang SC', '黑体', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      font-family: 'PingFang SC', -apple-system, sans-serif;
   }
   .bottom-content {
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 60px 40px 40px;
       display: flex;
       justify-content: space-between;
-      gap: 60px;
+      gap: 80px;
   }
   .bottom1 {
-    flex: 1;
+    flex: 1.2;
   }
-  .bottom-brand {
+  .bottom-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .bottom-logo-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom-logo-icon i {
     font-size: 20px;
-    font-weight: 600;
     color: #ffffff;
-    margin-top: 16px;
+  }
+  .bottom-logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
   }
   .bottom-desc {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .bottom-social {
+    display: flex;
+    gap: 12px;
+  }
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .social-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .social-icon i {
+    font-size: 16px;
+    color: #ffffff;
   }
   .bottom2, .bottom3 {
     flex: 1;
   }
   .bottom-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 12px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
-  .bottom-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  .bottom-text {
+  .bottom-link {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .bottom-link:hover {
+    color: #ffffff;
+    padding-left: 8px;
   }
   .bottom-item {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 12px;
-    transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  .bottom-item:hover {
-    color: #ffffff;
+  .bottom-item i {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
   }
   .bottom-copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     text-align: center;
-    padding: 20px;
+    padding: 24px;
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
   }
 </style>

@@ -1,22 +1,54 @@
 <template>
   <div class="login">
     <div class="login1">
+      <div class="login1-content">
+        <div class="login1-icon">
+          <i class="el-icon-position"></i>
+        </div>
+        <h1 class="login1-title">旅途</h1>
+        <p class="login1-subtitle">发现美好旅途，探索精彩世界</p>
+        <div class="login1-features">
+          <div class="feature">
+            <i class="el-icon-location-outline"></i>
+            <span>精选景点</span>
+          </div>
+          <div class="feature">
+            <i class="el-icon-map-location"></i>
+            <span>路线规划</span>
+          </div>
+          <div class="feature">
+            <i class="el-icon-office-building"></i>
+            <span>品质酒店</span>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="login4">
         <div class="login5">
+            <div class="login-header">
+              <h2 class="login6">欢迎回来</h2>
+              <p class="login-desc">登录您的账户，开启旅途</p>
+            </div>
 
-            <div class="login6">欢迎使用旅游信息推荐系统</div>
-
-            <el-input prefix-icon="el-icon-user" v-model="loginAccount" placeholder="请输入登录账号"></el-input>
-            <el-input prefix-icon="el-icon-star-off" type="password" v-model="password" placeholder="请输入用户密码"></el-input>
+            <div class="input-group">
+              <label class="input-label">账号</label>
+              <el-input prefix-icon="el-icon-user" v-model="loginAccount" placeholder="请输入登录账号"></el-input>
+            </div>
+            <div class="input-group">
+              <label class="input-label">密码</label>
+              <el-input prefix-icon="el-icon-lock" type="password" v-model="password" placeholder="请输入用户密码"></el-input>
+            </div>
             <div class="login7" @click="toForget">
                 忘记密码？
             </div>
             <div class="login8" @click="login">
                 登 录
             </div>
-            <div class="login8" @click="toRegister">
-                注 册
+            <div class="login-divider">
+              <span>或者</span>
+            </div>
+            <div class="login8 secondary" @click="toRegister">
+                注册新账号
             </div>
         </div>
     </div>
