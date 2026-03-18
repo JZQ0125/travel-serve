@@ -1,6 +1,8 @@
 <template>
   <div class="login">
     <div class="login1">
+      <img class="login1-bg" src="../../assets/image/login-bg.jpg" alt="background">
+      <div class="login1-overlay"></div>
       <div class="login1-content">
         <div class="login1-icon">
           <i class="el-icon-position"></i>
