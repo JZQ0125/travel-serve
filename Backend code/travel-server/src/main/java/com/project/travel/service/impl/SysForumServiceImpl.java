@@ -1,0 +1,15 @@
+package com.project.travel.service.impl;
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.project.travel.domain.SysForum;
+import com.project.travel.mapper.SysForumMapper;
+import com.project.travel.service.SysForumService;
+import org.springframework.stereotype.Service;
+
+/**
+ * @author 超级管理员
+ * @version 1.0
+ * @description: 资讯service实现类 */
+@Service
+public class SysForumServiceImpl extends ServiceImpl<SysForumMapper, SysForum> implements SysForumService {
+}
